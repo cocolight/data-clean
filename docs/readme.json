@@ -1,0 +1,237 @@
+{
+    "inputFiles": [
+        {
+            "f_path": "D:\\Downloads\\gonggao.s3db",
+            "ftype": "db3",
+            "sheets": [
+                "G366_clcp_zk"
+            ]
+        },
+        {
+            "f_path": "D:\\Downloads\\gonggao.s3db",
+            "ftype": "db3",
+            "sheets": [
+                "G366_chpdpk_zk"
+            ]
+        }
+    ],
+    "outputFile": "D:\\Downloads\\output.xlsx",
+    "1": {
+        "Process": "modify",
+        "SaveResult": "false",
+        "SaveFileAlias": "底盘",
+        "SheetName": [
+            "G366_clcp_zk"
+        ],
+        "Select": [
+            {
+                "column": "底盘型号",
+                "value": [
+                    "null"
+                ],
+                "logic": "nan",
+                "reverse": "0"
+            },
+            {
+                "column": "底盘品牌",
+                "value": [
+                    "东风牌"
+                ],
+                "logic": "contain",
+                "reverse": "0"
+            },
+            {
+                "column": "底盘型号",
+                "value": [
+                    "ZZ1257N"
+                ],
+                "logic": "equal",
+                "reverse": "0"
+            },
+            {
+                "column": "底盘型号",
+                "value": [
+                    "DF1185"
+                ],
+                "logic": "notequal",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "18000"
+                ],
+                "logic": "more",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "less",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "min less",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "min equal",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "min more",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "max less",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "max equal",
+                "reverse": "0"
+            },
+            {
+                "column": "整备质量",
+                "value": [
+                    "25000"
+                ],
+                "logic": "max more",
+                "reverse": "0"
+            }
+        ],
+        "Run": {
+            "How": "ReplaceAll",
+            "ReplaceAll": [
+                {
+                    "column": "列名",
+                    "valueafter": "替换值"
+                },
+                {
+                    "column": "列名",
+                    "valueafter": "替换值"
+                }
+            ],
+            "ReplacePart": [
+                {
+                    "column": "列名",
+                    "valueBefore": "",
+                    "valueafter": "替换值"
+                },
+                {
+                    "column": "列名",
+                    "valueBefore": "",
+                    "valueafter": "替换值"
+                }
+            ],
+            "UserDefine": {
+                "path": "脚本路径",
+                "other": ""
+            }
+        }
+    },
+    "2": {
+        "Process": "relations",
+        "SaveResult": "false",
+        "SaveFileAlias": "底盘",
+        "SheetName": [
+            "G366_clcp_zk"
+        ],
+        "Run": {
+            "How": "Extract",
+            "Extract": {
+                "rows": [
+                    {
+                        "column": "车辆型号",
+                        "value": [
+                            "null"
+                        ],
+                        "logic": "nan",
+                        "reverse": "1"
+                    },
+                    {
+                        "column": "中文品牌",
+                        "value": [
+                            "东风牌",
+                            "中集"
+                        ],
+                        "logic": "contain",
+                        "reverse": "0"
+                    },
+                    {
+                        "column": "车辆名称",
+                        "value": [
+                            "随车起重运输车"
+                        ],
+                        "logic": "equal",
+                        "reverse": "0"
+                    },
+                    {
+                        "column": "车辆型号",
+                        "value": [
+                            "DFZ5251JSQSZ6D"
+                        ],
+                        "logic": "notequal",
+                        "reverse": "0"
+                    }
+                ],
+                "columns": {
+                    "remain": [],
+                    "delete": []
+                }
+            },
+            "Match": {
+                "how": "right",
+                "targetcolumn": "",
+                "sheets": [
+                    {
+                        "sheet": "",
+                        "column": "",
+                        "appendColumns": []
+                    },
+                ]
+            },
+            "UserDefine": {
+                "path": "脚本路径",
+                "other": ""
+            }
+        }
+    },
+    "3": {
+        "Process": "analyse",
+        "SaveResult": "false",
+        "SaveFileAlias": "底盘",
+        "SheetName": [
+            "G366_clcp_zk"
+        ],
+        "Select": [],
+        "Run": {
+            "How": "ReplaceAll",
+            "UserDefine": {
+                "path": "脚本路径",
+                "other": ""
+            }
+        }
+    }
+}
